@@ -1,26 +1,27 @@
-// Header.jsx
-import "../css/Header.css";
+import "../css/masthead.css";
 
-function Header() {
+function Masthead() {
   return (
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            {/* Masthead Avatar Image*/}
-            <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-            {/* Masthead Heading*/}
-            <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
-            {/* Icon Divider*/}
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            {/* Masthead Subheading*/}
-            <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+    <header className="masthead">
+      <section className="section_head">
+        {/* Masthead Avatar Image*/}
+        <img className="avatar" src="src/assets/img/avatars.png" alt="Avatar" />
+        
+        {/* Masthead Heading*/}
+        <h1 >AMDY MUSTAFA</h1>
+        {/* Icon Divider*/}
+        <div className="lines-star">
+          <div className="line"></div>
+          <div><i className="fas fa-star"></i></div>
+          <div className="line"></div>
         </div>
+        {/* Masthead Subheading*/}
+        <p>Frontend Web Developer | React, JavaScript, Sass, Bootstrap, jQuery, Redux & More</p>
+        <img src="/avatars.png" alt="" />
+      </section>
     </header>
   );
 }
 
 
-export default Header;
+export default Masthead;

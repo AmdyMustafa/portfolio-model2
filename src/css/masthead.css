@@ -1,0 +1,18 @@
+.section_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: rgba(26, 188, 156, 1);
+    height: 100vh;
+}
+
+.avatar{
+    width: 250px;
+}
+h1{
+    font-size: 50px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
