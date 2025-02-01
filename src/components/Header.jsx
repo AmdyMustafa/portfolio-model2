@@ -11,7 +11,7 @@ function Header() {
                 </button>*/}
                 
                     <ul id="menu">
-                        <li ><a href="#portfolio">Portfolio</a></li>
+                        <li ><a href="#portfolio">Projets</a></li>
                         <li ><a href="#about">About</a></li>
                         <li ><a href="#contact">Contact</a></li>
                     </ul>
