@@ -16,7 +16,7 @@ function Masthead() {
           <div className="line"></div>
         </div>
         {/* Masthead Subheading*/}
-        <p>Frontend Web Developer | React, JavaScript, Sass, Bootstrap, jQuery, Redux & More</p>
+        <p>Frontend Web Developer </p>
         <img src="/avatars.png" alt="" />
       </section>
     </header>
