@@ -1,10 +1,11 @@
 // Header.jsx
 import "../css/Header.css";
 
-function Header({ activeSection }) {
+function Header({ activeSection, isAtTop }) {
     return (
-        <nav className="barre_entete" id="mainNav">
-            <a className="titre" href="#page-top">PORTFILIO</a>
+        <nav className="barre_entete" id="mainNav" style={{ height: isAtTop ? '100px' : '70px', transition: 'height 0.3s' }}>
+            <a className="titre" href="#section_head" style={{ fontSize: isAtTop ? '30px' : '20px', transition: 'font-size 0.3s ease-in-out' }}>PORTFOLIO</a>
+
             {/*<button>
                     Menu
                     <i className="fas fa-bars"></i>
