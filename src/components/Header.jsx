@@ -9,18 +9,12 @@ function Header({ activeSection }) {
                     Menu
                     <i className="fas fa-bars"></i>
                 </button>*/}
+            <menu id="menu">
+                <a href="#section_head" className={activeSection === 'section_head' ? 'active' : ''}>Projects</a>
+                <a href="#section_projets" className={activeSection === 'section_projets' ? 'active' : ''}>About</a>
+                <a href="#section_contact" className={activeSection === 'section_contacts' ? 'active' : ''}>Contacts</a>
 
-            <ul id="menu">
-                <li className={activeSection === 'section_head' ? 'active' : ''}>
-                    <a href="#section_head" >Projects</a>
-                </li>
-                <li className={activeSection === 'section_projets' ? 'active' : ''}>
-                    <a href="#section_projets">About</a>
-                </li>
-                <li className={activeSection === 'section_contacts' ? 'active' : ''}>
-                    <a href="#section_contact">Contacts</a>
-                </li>
-            </ul>
+            </menu>
 
         </nav>
     );
