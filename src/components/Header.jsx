@@ -12,7 +12,7 @@ function Header({ activeSection }) {
             <menu id="menu">
                 <a href="#section_head" className={activeSection === 'section_head' ? 'active' : ''}>Projects</a>
                 <a href="#section_projets" className={activeSection === 'section_projets' ? 'active' : ''}>About</a>
-                <a href="#section_contact" className={activeSection === 'section_contacts' ? 'active' : ''}>Contacts</a>
+                <a href="#section_contacts" className={activeSection === 'section_contacts' ? 'active' : ''}>Contacts</a>
 
             </menu>
 
