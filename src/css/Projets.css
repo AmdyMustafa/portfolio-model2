@@ -1,4 +1,13 @@
 .section_projet{
     background-color: rgb(211, 228, 225);
     height: 100vh;
+    color: rgba(44, 62, 80, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.section_projet .line {
+    background-color: rgba(44, 62, 80, 1);/* Force la couleur de fond pour les lignes dans la section */
 }

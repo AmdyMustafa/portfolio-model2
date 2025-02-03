@@ -1,11 +1,11 @@
-.section_head,.lines-star{
+.section_head{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-direction: column;
     background-color: rgba(26, 188, 156, 1);
-
+color: white;
 }
 .section_head{
     flex-direction: column;
@@ -15,17 +15,6 @@
 .avatar{
     width: 250px;
 }
-.lines-star{
-    flex-direction: row;
-    height: 75px;
-}
-.line{
-    width: 100px;
-    height: 5px;
-    background-color:  white;
-    margin: 10px;
-}
-.fa-star{
-    font-size: 30px;
-    color: white;
+.section_head .line {
+    background-color: white; 
 }
