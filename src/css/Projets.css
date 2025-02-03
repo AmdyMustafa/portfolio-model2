@@ -1,6 +1,5 @@
-.section_projet{
-    background-color: rgb(211, 228, 225);
-    height: 100vh;
+.section_projet {
+    background-color: var(--White-color);
     color: var(--secondary-color);
     display: flex;
     justify-content: center;
@@ -8,6 +7,64 @@
     align-content: center;
     flex-direction: column;
 }
+
 .section_projet .line {
-    background-color: var(--secondary-color);/* Force la couleur de fond pour les lignes dans la section */
+    background-color: var(--secondary-color);
+    /* Force la couleur de fond pour les lignes dans la section */
+}
+
+.project-wrap,
+.projet_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+.projet_div {
+    width: 30%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.projet_div:hover {
+    cursor: pointer;
+}
+
+.projet_div:hover projet_div::before {
+    content: "- ";
+    color: orange;
+    font-size: 30px;
+}
+
+.projet_div:hover projet_div::after {
+    content: " /";
+    color: orange;
+    font-size: 30px;
+}
+
+.projet_div img {
+    width: 70%;
+    height: 70%;
+    border-radius: 100px;
+}
+
+@media screen and (max-width:1000px) {
+    .projet_div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .projet_div {
+        width: 60%;
+    }
 }
