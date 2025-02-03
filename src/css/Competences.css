@@ -1,0 +1,58 @@
+.section_competences {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.competence-wrap,
+.competence_div,.competence_cadre,.competence_div_pointer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.competence-wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%px;
+    height: 100%;
+    margin: 50px 0;
+}
+
+.competence_div {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    height: 75px;
+}
+
+.competence_div:hover {
+    cursor: pointer;
+}
+.competence_cadre,.competence_div_pointer{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.competence_cadre .image_competence{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.competence_div_pointer{
+    position: absolute;
+    z-index: 1;
+    background-color: var(--White-color);
+    opacity: 0;
+    font-size: 10px;
+    transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+.competence_div_pointer:hover{
+    opacity: 1;
+    font-size: 20px;
+}

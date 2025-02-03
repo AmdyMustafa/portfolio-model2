@@ -4,6 +4,7 @@ import Header from './components/Header';
 import MastHead from './components/mastHead';
 import Projets from './components/Projets';
 import About from './components/About';
+import Competences from './components/Competences';
 import Contacts from './components/Contact';
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
       </section>
       <section id="section_about" ref={aboutRef}>
         <About />
+      </section>
+      <section>
+        <Competences />
       </section>
       <section id="section_contacts" ref={contactRef}>
         <Contacts />
