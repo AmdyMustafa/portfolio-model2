@@ -1,0 +1,29 @@
+.section_about,.text_about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_about {
+    background-color: var(--primary-color);;
+    color: var(--White-color);
+    flex-direction: column;
+}
+.section_about .line {
+    background-color: var(--White-color);
+   }
+.text_about{
+    width: 60%;
+    text-align: justify;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+@media screen and (max-width:1000px) {
+    .text_about{
+        flex-direction: column;
+        width: 80%;
+        
+    }
+}
