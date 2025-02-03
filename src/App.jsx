@@ -6,13 +6,13 @@ import Projets from './components/Projets';
 import Contacts from './components/Contact';
 
 function App() {
-  const isAtTop = useScrollDetection();
   
   const [activeSection, setActiveSection] = useState('section_head');
 
   const [headRef, headInView] = useInView({ threshold: 0.6 });
   const [projetsRef, projetsInView] = useInView({ threshold: 0.6 });
   const [contactRef, contactInView] = useInView({ threshold: 0.6 });
+  const { ref: topRef, inView: isAtTop } = useInView({ threshold: 0 });
 
   // Utilisez useEffect pour gérer les mises à jour d'état
   useEffect(() => {
@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <div ref={topRef}></div> {/* Détection du haut de la page */}
       <Header activeSection={activeSection} isAtTop={isAtTop}/>
       <section id="section_head" ref={headRef}>
         <MastHead />
@@ -35,23 +36,6 @@ function App() {
       </section>
     </div>
   );
-}
-function useScrollDetection() {
-  const [isAtTop, setIsAtTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0); // Vérifie si l'utilisateur est en haut de la page
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return isAtTop;
 }
 
 export default App;
