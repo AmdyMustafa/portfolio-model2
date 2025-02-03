@@ -1,14 +1,82 @@
-.section_contacts{
+.section_contacts {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.section_contacts {
-    background-color:var(--White-color);
+    background-color: var(--White-color);
     color: var(--secondary-color);
     flex-direction: column;
+    width: 100%;
+    margin-bottom: 100px;
 }
+
 .section_contacts .line {
-    background-color:  var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
+#contactForm {
+    width: 50%;
+}
+
+.form-elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.input::placeholder {
+    color: #929496;
+    font-size: 25px;
+}
+
+label {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    font-size: 25px;
+    font-weight: 400;
+    color: #888;
+    transition:  font-size 0.3s ease, top 0.3s ease; 
+    pointer-events: none;
+    cursor: none;
+}
+
+#message{
+    height: 150px;
+}
+
+/* Si l'.input est cliqué ou en focus, déplace le label */
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+  font-size: 16px;
+  top: -10px;
+}
+
+.input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid blue;
+}
+
+.button_send{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    background-color:  var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
 }

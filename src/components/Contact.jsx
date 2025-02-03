@@ -10,33 +10,29 @@ function Contacts() {
         <div><i className="fas fa-star"></i></div>
         <div className="line"></div>
       </div>
-      <div className="contact_form">
-        <form id="contactForm">
-          <div>
+      <form id="contactForm">
+          <div className="form-elem">
+            <input className="input" id="name" type="text" placeholder=" " required />
             <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Enter your name..." required />
-          </div>
+            </div>
 
-          <div>
+          <div className="form-elem">
+            <input className="input"  id="email" type="email" placeholder=" " required />
             <label for="email">Email address</label>
-            <input id="email" type="email" placeholder="name@example.com" required />
-          </div>
+            </div>
 
-          <div>
+          <div className="form-elem">
+            <input className="input"  id="phone" type="tel" placeholder=" " required />
             <label for="phone">Phone number</label>
-            <input id="phone" type="tel" placeholder="(123) 456-7890" required />
-          </div>
+            </div>
 
-          <div>
+          <div className="form-elem">
+            <textarea className="input" id="message" required placeholder=" " ></textarea>
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter your message here..." required></textarea>
-          </div>
+            </div>
 
-          <button type="submit">Send</button>
+          <button className="button_send" type="submit">Send</button>
         </form>
-
-
-      </div>
     </section>
   );
 }
