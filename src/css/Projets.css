@@ -14,7 +14,7 @@
 }
 
 .project-wrap,
-.projet_div {
+.projet_div,.projet_cadre,.projet_div_pointer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,33 +30,39 @@
 }
 
 .projet_div {
+    position: relative;
     width: 30%;
-    height: 250px;
-    border-radius: 20px;
+    height: 300px;
 }
 
 .projet_div:hover {
     cursor: pointer;
 }
-
-.projet_div:hover projet_div::before {
-    content: "- ";
-    color: orange;
-    font-size: 30px;
+.projet_cadre,.projet_div_pointer{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
-
-.projet_div:hover projet_div::after {
-    content: " /";
-    color: orange;
-    font-size: 30px;
-}
-
-.projet_div img {
+.projet_cadre .immage_projet{
     width: 70%;
     height: 70%;
     border-radius: 100px;
 }
 
+.projet_div .projet_div_pointer{
+    position: absolute;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+.projet_div_pointer:hover{
+    opacity: 0.8;
+}
+.fa-plus{
+    font-size: 75px;
+    color: var(--White-color) ;
+    opacity: 1;
+}
 @media screen and (max-width:1000px) {
     .projet_div {
         width: 40%;
