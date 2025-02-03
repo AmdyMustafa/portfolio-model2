@@ -27,7 +27,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 75px;
+    margin-bottom: 20px;
 
 }
 .line{
@@ -37,4 +37,10 @@ p {
 }
 .fa-star{
     font-size: 30px;
+}
+
+@media screen and (max-width:1000px) {
+    h2 {
+        font-size: 40px;
+    }
 }
