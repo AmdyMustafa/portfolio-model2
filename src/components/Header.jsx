@@ -56,8 +56,8 @@ function Header({ activeSection, isAtTop }) {
                     transition: 'max-height 0.5s ease-in-out', // Animation fluide de max-height
                    }}
             >
-                <a href="#section_head" className={activeSection === 'section_head' ? 'active' : ''}>Projects</a>
-                <a href="#section_projets" className={activeSection === 'section_projets' ? 'active' : ''}>About</a>
+                <a href="#section_head" className={activeSection === 'section_projets' ? 'active' : ''}>Projects</a>
+                <a href="#section_projets" className={activeSection === 'section_about' ? 'active' : ''}>About</a>
                 <a href="#section_contacts" className={activeSection === 'section_contacts' ? 'active' : ''}>Contacts</a>
             </div>
         </nav>
