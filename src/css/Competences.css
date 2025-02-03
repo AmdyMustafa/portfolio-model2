@@ -49,7 +49,7 @@
     z-index: 1;
     background-color: var(--White-color);
     opacity: 0;
-    font-size: 10px;
+    font-size: 30px;
     transition: opacity 0.3s ease, font-size 0.3s ease;
 }
 .competence_div_pointer:hover{
