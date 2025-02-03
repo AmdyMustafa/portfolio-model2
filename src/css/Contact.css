@@ -1,4 +1,14 @@
 .section_contacts{
-    background-color: rgb(126, 211, 195);
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_contacts {
+    background-color:var(--White-color);
+    color: var(--secondary-color);
+    flex-direction: column;
+}
+.section_contacts .line {
+    background-color:  var(--secondary-color);
 }
