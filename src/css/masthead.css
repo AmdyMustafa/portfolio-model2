@@ -4,12 +4,12 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-    background-color: rgba(26, 188, 156, 1);
+    background-color: var(--primary-color);
 color: white;
 }
 .section_head{
     flex-direction: column;
-    background-color: rgba(26, 188, 156, 1);
+    background-color: var(--primary-color);
     height: 100vh;
 }
 .avatar{

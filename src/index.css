@@ -1,6 +1,13 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+:root {
+    --primary-color: rgba(26, 188, 156, 1); /* Couleur principale */
+    --secondary-color: rgba(44, 62, 80, 1); /* Couleur secondaire */
+    --White-color: white;
+    --Black-color: black;
+}
+
 h1 {
     font-size: 50px;
     color: white;
