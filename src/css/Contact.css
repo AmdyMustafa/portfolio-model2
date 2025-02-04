@@ -33,7 +33,7 @@
     height: 50px;
     font-size: 20px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(215, 213, 213);
 }
 
 .input::placeholder {
@@ -67,7 +67,7 @@ label {
 .input:focus {
   outline: none;
   border: none;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid var(--secondary-color);;
 }
 
 .button_send{

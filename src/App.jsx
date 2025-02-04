@@ -6,6 +6,7 @@ import Projets from './components/Projets';
 import About from './components/About';
 import Competences from './components/Competences';
 import Contacts from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -43,6 +44,9 @@ function App() {
       </section>
       <section id="section_contacts" ref={contactRef}>
         <Contacts />
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   );
