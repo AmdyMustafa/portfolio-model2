@@ -1,41 +1,45 @@
 import "../css/Footer.css";
 
 function Footer() {
-  return (
-    <footer>
-      {/* Footer Location */}
-      <div>
-        <h4>Location</h4>
-        <p>
-          2215 John Daniel Drive
-          <br />
-          Clark, MO 65243
-        </p>
-      </div>
+    return (
+        <section className="section_footer">
+            <footer className="footer">
+                {/* Footer Location */}
+                <div className="div_footer">
+                    <h4>Localisation</h4>
+                    <p>
+                        Lyon
+                        <br />
+                        69000 France
+                    </p>
+                </div>
 
-      {/* Footer Social Icons */}
-      <div>
-        <h4>Around the Web</h4>
-        <a href="#!" className="fab fa-facebook-f">Facebook</a>
-        <a href="#!" className="fab fa-twitter">Twitter</a>
-        <a href="#!" className="fab fa-linkedin-in">LinkedIn</a>
-        <a href="#!" className="fab fa-dribbble">Dribbble</a>
-      </div>
+                {/* Footer Social Icons */}
+                <div className="div_footer">
+                    <h4>Me retrouver</h4>
+                    <div className="div_patager">
+                        <a href="www.linkedin.com/in/amdy-mustafa" className="icone_a" target="_blanc">
+                            <i className="icone_i fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/AmdyMustafa" className="icone_a" target="_blanc">
+                            <i className="icone_i fab fa-github"></i>
+                        </a></div>
+                </div>
 
-      {/* Footer About Text */}
-      <div>
-        <h4>About Freelancer</h4>
-        <p>
-          Freelance is a free to use, MIT licensed Bootstrap theme created by
-        </p>
-      </div>
+                {/* Footer About Text */}
+                <div className="div_footer">
+                    <h4>About Freelancer</h4>
+                    <p>Freelance is a free to use, MIT licensed Bootstrap theme created by
+                    </p>
+                </div>
+            </footer>
 
-      {/* Copyright Section */}
-      <div>
-        <small>Copyright &copy; Your Website 2023</small>
-      </div>
-    </footer>
-  );
+            {/* Copyright Section */}
+            <div>
+                <small>Copyright &copy; Your Website 2023</small>
+            </div>
+        </section>
+    );
 }
 
 export default Footer;
