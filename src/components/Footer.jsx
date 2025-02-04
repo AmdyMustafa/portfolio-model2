@@ -35,9 +35,7 @@ function Footer() {
             </footer>
 
             {/* Copyright Section */}
-            <div>
-                <small>Copyright &copy; Your Website 2023</small>
-            </div>
+            <p className="copyright">Copyright Amdy Mustafa 2025</p>
         </section>
     );
 }
