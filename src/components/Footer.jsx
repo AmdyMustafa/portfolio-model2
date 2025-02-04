@@ -18,7 +18,7 @@ function Footer() {
                 <div className="div_footer">
                     <h4>Me retrouver</h4>
                     <div className="div_patager">
-                        <a href="www.linkedin.com/in/amdy-mustafa" className="icone_a" target="_blanc">
+                        <a href="https://www.linkedin.com/in/amdy-mustafa/" className="icone_a" target="_blanc">
                             <i className="icone_i fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://github.com/AmdyMustafa" className="icone_a" target="_blanc">
@@ -28,10 +28,8 @@ function Footer() {
 
                 {/* Footer About Text */}
                 <div className="div_footer">
-                    <h4>About Freelancer</h4>
-                    <p>Freelance is a free to use, MIT licensed Bootstrap theme created by
-                    </p>
-                </div>
+                    <img src="src/assets/img/logo.png" alt=""/>
+                    </div>
             </footer>
 
             {/* Copyright Section */}
