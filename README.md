@@ -4,3 +4,11 @@ Bienvenue dans mon portfolio ! Ce dépôt contient une sélection de mes projets
 
 Description
 Dans ce dépôt, tu trouveras des projets variés que j'ai réalisés au cours de mon parcours. 
+
+Intallation
+
+git clone https://github.com/AmdyMustafa/Portfilio.git
+cd .\Portfilio\
+npm install
+npm install intersection-observer
+npm run dev
