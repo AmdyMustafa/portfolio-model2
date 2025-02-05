@@ -28,7 +28,7 @@ function Footer() {
 
                 {/* Footer About Text */}
                 <div className="div_footer">
-                    <img src="src/assets/img/logo.png" alt=""/>
+                    <img src="./assets/img/logo.png" alt=""/>
                     </div>
             </footer>
 

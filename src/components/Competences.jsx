@@ -6,16 +6,16 @@ return (
     <h3>COMPETENCES</h3>
     <div className="competence-wrap">
 
-        <Competence_div text="HTML" src="src/assets/competences-image/html-5.png"/>
+        <Competence_div text="HTML" src="./assets/competences-image/html-5.png"/>
 
-        <Competence_div text="SASS" src="src/assets/competences-image/sass.png" />
+        <Competence_div text="SASS" src="./assets/competences-image/sass.png" />
 
-        <Competence_div text="JAVASCRIPT" src="src/assets/competences-image/javascript.png"
+        <Competence_div text="JAVASCRIPT" src="./assets/competences-image/javascript.png"
             background="rgb(19,15,15)" />
 
-        <Competence_div text="REACT" src="src/assets/competences-image/react.png" />
+        <Competence_div text="REACT" src="./assets/competences-image/react.png" />
 
-        <Competence_div text="REDUX" src="src/assets/competences-image/redux.png" />
+        <Competence_div text="REDUX" src="./assets/competences-image/redux.png" />
 
     </div>
 </section>

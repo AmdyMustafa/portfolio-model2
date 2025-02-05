@@ -16,23 +16,23 @@ function Projets() {
   const projets = [
     [
       "Développement d'une calculatrice complète, implémentant les fonctionnalités de calcul basiques (addition, soustraction, multiplication, division) avec React et JavaScript. J’ai géré les entrées utilisateur et les résultats avec une logique claire et optimisée. Ce projet a renforcé mes compétences en gestion d’événements, en calculs en temps réel et en architecture d’application avec React et Redux.",
-      "src/assets/projets-image/calculatrice.png"
+      "./assets/projets-image/calculatrice.png"
     ],
     [
       "Conception d’une application React pour générer des citations aléatoires, intégrant une API externe pour récupérer les données en temps réel. La gestion de l’état a été réalisée via React Hooks, et l’interface utilisateur est optimisée pour une expérience fluide, avec une fonctionnalité de partage sur les réseaux sociaux via l'API de partage Web. Ce projet a permis de démontrer ma maîtrise des requêtes HTTP, de l’asynchronisme avec fetch, et de la gestion d’état dans React.",
-      "src/assets/projets-image/citation.png"
+      "./assets/projets-image/citation.png"
     ],
     [
       "Création d’une machine à tambour interactive en utilisant React et la manipulation d’éléments HTML Audio. L’application réagit aux pressions des touches du clavier et affiche les animations correspondantes en temps réel. La gestion des événements clavier et l'optimisation de l'interface avec des animations CSS ont permis d’offrir une interaction rapide et fluide. Ce projet m’a permis d’explorer les manipulations des API Web Audio et la gestion des états complexes avec React.",
-      "src/assets/projets-image/drum-machine.png"
+      "./assets/projets-image/drum-machine.png"
     ],
     [
       "Création d’une application de minuteur avec React, offrant une gestion dynamique des sessions de travail et de pause. L’application utilise setInterval pour la gestion du temps, avec des transitions visuelles entre les sessions. L’interface a été soigneusement conçue pour garantir une ergonomie optimale, et les événements ont été gérés de manière efficace avec les Hooks React. Ce projet m’a permis de perfectionner ma gestion des timers et des interactions utilisateur en temps réel.",
-      "src/assets/projets-image/horloge.png"
+      "./assets/projets-image/horloge.png"
     ],
     [
       "Développement d'un éditeur Markdown avec React, permettant une conversion en temps réel de syntaxe markdown en HTML. L’utilisation de la librairie marked.js pour le rendu dynamique et l’intégration des événements onChange pour la synchronisation immédiate entre l’éditeur et le previewer a permis de créer une expérience utilisateur réactive. Ce projet a approfondi mes compétences en gestion d’interfaces dynamiques et en manipulation de données utilisateur.",
-      "src/assets/projets-image/previsualisation.png"
+      "./assets/projets-image/previsualisation.png"
     ]
   ];
   
