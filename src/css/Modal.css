@@ -17,7 +17,7 @@
     background: white;
     border-radius: 10px;
     width: 70%;
-    height: 90%;
+    height: 95%;
     max-width: 1200px;
     animation: fadeIn 0.3s ease-in-out;
     display: flex;
@@ -58,15 +58,15 @@
 }
 
 .img_modal {
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     border-radius: 20px;
 }
 
 .description {
     color: black;
     font-size: 15px;
-    margin: 0 20%;
+    margin: 20px 20%;
     text-align: justify;
 }
 

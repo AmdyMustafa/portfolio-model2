@@ -35,9 +35,15 @@ function Header({ activeSection, isAtTop }) {
             height: isAtTop ? 'auto' : 'auto',
             transition: 'font-size 0.3s ease-in-out, height 0.3s ease-in-out'
         }}>
+            <div>
             <a className="titre" href="#section_head">
-                PORTFOLIO
+                Model 1
             </a>
+            <a className="titre" href="#section_head">
+                Model 2
+            </a>
+            </div>
+            
 
             {/* Afficher le bouton de menu si la largeur de la fenêtre est inférieure à 850px */}
             {window.innerWidth < 850 && (
