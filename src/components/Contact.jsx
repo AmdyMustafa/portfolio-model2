@@ -1,8 +1,13 @@
 import "../css/Contact.css";
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contacts() {
+  const [state, handleSubmit] = useForm("xzzdvpnr");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
   return (
-    <section className="section_contacts">
+    <section className="section_contacts" onSubmit={handleSubmit}>
       <h2 >Contacts</h2>
       {/* Icon Divider*/}
       <div className="lines-star">
@@ -31,7 +36,7 @@ function Contacts() {
             <label for="message">Message</label>
             </div>
 
-          <button className="button_send" type="submit">Send</button>
+          <button className="button_send" type="submit" disabled={state.submitting}>Send</button>
         </form>
     </section>
   );
