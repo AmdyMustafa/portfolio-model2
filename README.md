@@ -22,6 +22,7 @@ Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous 
    ```bash
     npm install
     npm install intersection-observer
+    npm install @formspree/react
 
 4. Démarrez le serveur de développement :
    ```bash
