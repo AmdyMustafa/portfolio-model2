@@ -5,7 +5,7 @@ function Masthead() {
     <header className="masthead">
       <section className="section_head">
         {/* Masthead Avatar Image*/}
-        <img className="avatar" src="./assets/img/avatars.png" alt="Avatar" />
+        <img className="avatar" src="/assets/img/avatars.png" alt="Avatar" />
         
         {/* Masthead Heading*/}
         <h1 >AMDY MUSTAFA</h1>
