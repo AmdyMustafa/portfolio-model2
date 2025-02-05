@@ -17,20 +17,33 @@
     background: white;
     border-radius: 10px;
     width: 70%;
-    max-width: 500px;
+    max-width: 1200px;
     animation: fadeIn 0.3s ease-in-out;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-   padding-bottom: 30px; 
-   max-height: 80vh;
-   overflow-y: auto;
+    padding-bottom: 30px;
+    max-height: 80vh;
+    overflow-y: auto;
 
 }
 
 /* Bouton de fermeture */
-.close-btn {
+.close-btn1 {
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #555;
+
+}
+
+.close-btn2 {
     font-size: 15px;
     background-color: var(--primary-color);
     padding: 10px;
@@ -40,19 +53,22 @@
 
 }
 
-.close-btn:hover {
+.close-btn2:hover {
     color: black;
 }
-.img_modal{
-    width: 70%;
-    height: 300px;
+
+.img_modal {
+    width: 500px;
+    height: 400px;
     border-radius: 20px;
 }
-.description{
+
+.description {
     color: black;
     font-size: 15px;
     margin: 5% 10%;
 }
+
 /* Animation d'apparition */
 @keyframes fadeIn {
     from {
@@ -65,6 +81,11 @@
         transform: translateY(0);
     }
 }
-@media (max-width: 1000px) {
 
+@media (max-width: 1000px) {
+    .img_modal {
+        width: 80%;
+        height: 400px;
+        border-radius: 20px;
+    }
 }

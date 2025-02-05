@@ -6,7 +6,9 @@ const Modal = ({ isOpen, onClose, titre, src ,desciption}) => {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-
+                <button className="close-btn1" onClick={onClose}>
+                    ✕
+                </button>
                 <h2 >{titre}</h2>
                 {/* Icon Divider*/}
                 <div className="lines-star">
@@ -16,7 +18,7 @@ const Modal = ({ isOpen, onClose, titre, src ,desciption}) => {
                 </div>
                 <img className="img_modal" src={src} alt="" />
                 <p className="description">{desciption}</p>
-                <button className="close-btn" onClick={onClose}>
+                <button className="close-btn2" onClick={onClose}>
                     ✕ Fermer
                 </button>
             </div>
