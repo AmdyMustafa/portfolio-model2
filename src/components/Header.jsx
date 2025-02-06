@@ -31,11 +31,11 @@ function Header({ activeSection, isAtTop }) {
 
     return (
         <nav className="barre_entete" id="mainNav" style={{
-            fontSize: isAtTop ? '40px' : '30px',
+            fontSize: isAtTop ? '0' : '30px',
             transform: isAtTop ? 'scaleY(0)' : 'scaleY(1)',
             transformOrigin: 'top',
-            background: isAtTop ? 'transparent' : 'white',  // Remplacer 'non' par 'transparent'
-            transition: 'background 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.5s ease-in-out'  // Corriger la syntaxe de transition
+            background: isAtTop ? 'transparent' : 'white',  
+            transition: 'fontSize 0.3s ease-in-out, background 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.5s ease-in-out' 
         }}>
         
         
