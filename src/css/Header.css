@@ -4,7 +4,7 @@
     align-items: center;
 }
 .barre_entete{
-    background-color: var(--secondary-color);
+    background-color: var(--White-color);
     width: 100%;
     padding: 10px 10%;
     position: fixed;
