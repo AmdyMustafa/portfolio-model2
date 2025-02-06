@@ -39,13 +39,8 @@ function Header({ activeSection, isAtTop }) {
         }}>
         
         
-            <div
-            style={{
-                height: isAtTop ? '0' : 'auto', // Utilise maxHeight pour animer
-                overflow: 'hidden',                        // Cache tout ce qui dépasse
-                transition: 'max-height 0.5s ease-in-out', // Animation fluide de max-height
-               }}>
-            <a className="titre" href="#section_head">
+            <div>
+            <a className="titre" href="https://amdymustafa.github.io/Portfilio/">
                 Model 1
             </a>
             <a className="titre" href="#section_head">
