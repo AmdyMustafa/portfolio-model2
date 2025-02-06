@@ -8,8 +8,8 @@ function useMenuVisibility() {
     useEffect(() => {
         // Détecte la largeur de la fenêtre à chaque changement de taille
         const handleResize = () => {
-            if (window.innerWidth >= 850) {
-                setIsMenuVisible(true);  // Affiche le menu si la largeur est >= 850px
+            if (window.innerWidth >= 770) {
+                setIsMenuVisible(true);  // Affiche le menu si la largeur est >= 770px
             } else {
                 setIsMenuVisible(false); // Cache le menu sur les petits écrans
             }
@@ -32,10 +32,19 @@ function Header({ activeSection, isAtTop }) {
     return (
         <nav className="barre_entete" id="mainNav" style={{
             fontSize: isAtTop ? '40px' : '30px',
-            height: isAtTop ? 'auto' : 'auto',
-            transition: 'font-size 0.3s ease-in-out, height 0.3s ease-in-out'
+            transform: isAtTop ? 'scaleY(0)' : 'scaleY(1)',
+            transformOrigin: 'top',
+            background: isAtTop ? 'transparent' : 'white',  // Remplacer 'non' par 'transparent'
+            transition: 'background 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.5s ease-in-out'  // Corriger la syntaxe de transition
         }}>
-            <div>
+        
+        
+            <div
+            style={{
+                height: isAtTop ? '0' : 'auto', // Utilise maxHeight pour animer
+                overflow: 'hidden',                        // Cache tout ce qui dépasse
+                transition: 'max-height 0.5s ease-in-out', // Animation fluide de max-height
+               }}>
             <a className="titre" href="#section_head">
                 Model 1
             </a>
@@ -45,8 +54,8 @@ function Header({ activeSection, isAtTop }) {
             </div>
             
 
-            {/* Afficher le bouton de menu si la largeur de la fenêtre est inférieure à 850px */}
-            {window.innerWidth < 850 && (
+            {/* Afficher le bouton de menu si la largeur de la fenêtre est inférieure à 770px */}
+            {window.innerWidth < 770 && (
                 <button className="button_menu" onClick={() => setIsMenuVisible(!isMenuVisible)}>
                     Menu
                     <i className="fas fa-bars"></i>
@@ -58,12 +67,14 @@ function Header({ activeSection, isAtTop }) {
                 id="menu" 
                 style={{
                     maxHeight: isMenuVisible ? '500px' : '0px', // Utilise maxHeight pour animer
-                    overflow: 'hidden',                        // Cache tout ce qui dépasse
+                    overflow: 'hidden',                       // Cache tout ce qui dépasse
                     transition: 'max-height 0.5s ease-in-out', // Animation fluide de max-height
                    }}
             >
+                <a href="#section_accueil" className={activeSection === 'section_projets' ? 'active' : ''}>Accueil</a>
+                <a href="#section_about" className={activeSection === 'section_about' ? 'active' : ''}>A propos</a>
+                <a href="#section_competences" className={activeSection === 'section_projets' ? 'active' : ''}>Compétences</a>
                 <a href="#section_projets" className={activeSection === 'section_projets' ? 'active' : ''}>Projects</a>
-                <a href="#section_about" className={activeSection === 'section_about' ? 'active' : ''}>About</a>
                 <a href="#section_contacts" className={activeSection === 'section_contacts' ? 'active' : ''}>Contacts</a>
             </div>
         </nav>
