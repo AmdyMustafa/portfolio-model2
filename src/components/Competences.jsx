@@ -1,9 +1,12 @@
 import "../css/Competences.css";
+import Titre from "./composants/Titre";
 
 function Competences() {
 return (
 <section className="section_competences">
-    <h3>COMPETENCES</h3>
+    
+    <Titre titre1="COMPETENCES" titre2="Savoir Faire"/>
+            
     <div className="competence-wrap">
 
         <Competence_div text="HTML" src="./assets/competences-image/html-5.png"/>
