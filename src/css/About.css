@@ -4,8 +4,7 @@
     align-items: center;
 }
 .section_about {
-    background-color: var(--primary-color);;
-    color: var(--White-color);
+    background-color: var(--White-color);
     flex-direction: column;
 }
 .section_about .line {
@@ -18,6 +17,9 @@
     margin-bottom: 50px;
     flex-direction: row;
     align-items: flex-start;
+}
+.text_about p{
+    color: black;
 }
 
 @media screen and (max-width:1000px) {

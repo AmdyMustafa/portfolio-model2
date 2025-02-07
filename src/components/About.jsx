@@ -1,15 +1,10 @@
 import "../css/About.css";
+import Titre from "./composants/Titre";
 
 function About() {
     return (
         <section className="section_about">
-            <h2 >ABOUT</h2>
-            {/* Icon Divider*/}
-            <div className="lines-star">
-                <div className="line"></div>
-                <div><i className="fas fa-star"></i></div>
-                <div className="line"></div>
-            </div>
+            <Titre titre1="A PROPOS" titre2="Qui suis-je"/>
             <div className="text_about">
                 <p>
                     Développeur front-end passionné, je combine expertise technique et créativité pour créer des expériences web interactives et performantes. 

@@ -33,11 +33,11 @@ function App() {
       <section id="section_head" ref={headRef}>
         <MastHead />
       </section>
-      <section id="section_projets" ref={projetsRef}>
-        <Projets />
-      </section>
       <section id="section_about" ref={aboutRef}>
         <About />
+      </section>
+      <section id="section_projets" ref={projetsRef}>
+        <Projets />
       </section>
       <section>
         <Competences />
