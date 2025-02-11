@@ -1,6 +1,7 @@
 import "../css/Projets.css";
 import React, { useState } from 'react';
 import Modal from './Modal';
+import Titre from "./composants/Titre";
 
 function Projets() {
   const [modalOpen, setModalOpen] = useState(null);
@@ -35,30 +36,23 @@ function Projets() {
       "./assets/projets-image/previsualisation.png"
     ]
   ];
-  
+
   return (
     <section className="section_projet">
-      <h2 >PORTFOLIO</h2>
-      {/* Icon Divider*/}
-      <div className="lines-star">
-        <div className="line"></div>
-        <div><i className="fas fa-star"></i></div>
-        <div className="line"></div>
-      </div>
+      <Titre titre1="PROJETS" titre2="Réalisation" />
       <div className="project-wrap">
 
-        <Projet_div src={projets[0][1]} background="rgb(186,76,99)" onClick={() => openModal(1)} />
+        <Projet_div src={projets[0][1]} titre_projet="Calculatrice" technologies="React Js" onClick={() => openModal(1)} />
 
-        <Projet_div src={projets[1][1]} background="rgb(31,164,182)" onClick={() => openModal(2)} />
+        <Projet_div src={projets[1][1]}  titre_projet="Quote Machine" technologies="JavaScript" onClick={() => openModal(2)} />
 
-        <Projet_div src={projets[2][1]} background="rgb(19,15,15)" onClick={() => openModal(3)} />
+        <Projet_div src={projets[2][1]}  titre_projet="Drum Machine" technologies="JavaScript"   onClick={() => openModal(3)} />
 
-        <Projet_div src={projets[3][1]} background="rgb(29,131,193)" onClick={() => openModal(4)} />
+        <Projet_div src={projets[4][1]}   titre_projet="Markdown Previewer" technologies="JavaScript"  onClick={() => openModal(5)} />
 
-        <Projet_div src={projets[4][1]} background="rgb(16,55,181)" onClick={() => openModal(5)} />
+        <Projet_div src={projets[3][1]}  titre_projet="25 + 5 Clock" technologies="JavaScript"  onClick={() => openModal(4)} />
 
-        {/*rgb(204,178,163)*/}
-
+        
       </div>
 
       {modalOpen === 1 &&
@@ -109,14 +103,21 @@ function Projets() {
     </section>
   );
 }
-function Projet_div({ src, background, onClick }) {
+function Projet_div({ titre_projet, technologies, src, onClick }) {
   return (
     <div className="projet_div" onClick={onClick}>
-      <div className="projet_cadre" style={{ backgroundColor: background }}>
-        <img className="immage_projet" src={src} alt="" />
-      </div>
-      <div className="projet_div_pointer">
-        <i className="fas fa-plus"></i>
+      <img className="image_projet" src={src} alt="" />
+      <div className="projet_div_footer">
+        <p className="titre_projet">{titre_projet}</p>
+        <p className="technologies">{technologies}</p>
+        <div className="div_patager">
+        <a href="" title="Voir les détails" className="icone_a">
+            <i className="icone_i fa-solid fa-circle-plus"></i>
+          </a>
+          <a href="https://github.com/AmdyMustafa" className="icone_a" target="_blank" title="Retrouver le projet sur github">
+            <i className="icone_i fab fa-github"></i>
+          </a>
+        </div>
       </div>
     </div>
   );
