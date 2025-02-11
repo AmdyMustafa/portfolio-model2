@@ -15,6 +15,7 @@ function App() {
   const [headRef, headInView] = useInView({ threshold: 0.6 });
   const [projetsRef, projetsInView] = useInView({ threshold: 0.6 });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.6 });
+  const [competencesRef, comptencesInView] = useInView({ threshold: 0.6 });
   const [contactRef, contactInView] = useInView({ threshold: 0.6 });
   const { ref: topRef, inView: isAtTop } = useInView({ threshold: 0 });
 
@@ -23,8 +24,9 @@ function App() {
     if (headInView) setActiveSection('section_head');
     if (projetsInView) setActiveSection('section_projets');
     if (aboutInView) setActiveSection('section_about');
+    if (comptencesInView) setActiveSection('section_competences');
     if (contactInView) setActiveSection('section_contacts');
-  }, [headInView, projetsInView,aboutInView, contactInView]); // Déclenche useEffect uniquement lorsque ces valeurs changent
+  }, [headInView, projetsInView,aboutInView, comptencesInView,contactInView]); // Déclenche useEffect uniquement lorsque ces valeurs changent
 
   return (
     <div>
@@ -36,7 +38,7 @@ function App() {
       <section id="section_about" ref={aboutRef}>
         <About />
       </section>
-      <section>
+      <section id="section_competences" ref={competencesRef}>
         <Competences />
       </section>
       <section id="section_projets" ref={projetsRef}>
