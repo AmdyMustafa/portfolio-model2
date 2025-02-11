@@ -3,134 +3,81 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import Titre from "./composants/Titre";
 
-// Les descriotion et les images des projets
 const projets = [
-  [ "Calculatrice",
-    "React Js",
-    "Développement d'une calculatrice complète, implémentant les fonctionnalités de calcul basiques (addition, soustraction, multiplication, division) avec React et JavaScript. J’ai géré les entrées utilisateur et les résultats avec une logique claire et optimisée. Ce projet a renforcé mes compétences en gestion d’événements, en calculs en temps réel et en architecture d’application avec React et Redux.",
-    "./assets/projets-image/calculatrice.png",
-    "https://github.com/AmdyMustafa/Calculatrice"
-  ],
-  [
-    "Quote Machine",
-    "JavaScript" ,
-    "Conception d’une application React pour générer des citations aléatoires, intégrant une API externe pour récupérer les données en temps réel. La gestion de l’état a été réalisée via React Hooks, et l’interface utilisateur est optimisée pour une expérience fluide, avec une fonctionnalité de partage sur les réseaux sociaux via l'API de partage Web. Ce projet a permis de démontrer ma maîtrise des requêtes HTTP, de l’asynchronisme avec fetch, et de la gestion d’état dans React.",
-    "./assets/projets-image/citation.png",
-    "https://github.com/AmdyMustafa/CitationAleatoire"
-
-  ],
-  [
-    "Quote Machine",
-    "JavaScript" ,
-    "Création d’une machine à tambour interactive en utilisant React et la manipulation d’éléments HTML Audio. L’application réagit aux pressions des touches du clavier et affiche les animations correspondantes en temps réel. La gestion des événements clavier et l'optimisation de l'interface avec des animations CSS ont permis d’offrir une interaction rapide et fluide. Ce projet m’a permis d’explorer les manipulations des API Web Audio et la gestion des états complexes avec React.",
-    "./assets/projets-image/drum-machine.png",
-    "https://github.com/AmdyMustafa/CitationAleatoire"
-  ],
-  [ "Markdown Previewer",
-    "JavaScript" ,
-    "Développement d'un éditeur Markdown avec React, permettant une conversion en temps réel de syntaxe markdown en HTML. L’utilisation de la librairie marked.js pour le rendu dynamique et l’intégration des événements onChange pour la synchronisation immédiate entre l’éditeur et le previewer a permis de créer une expérience utilisateur réactive. Ce projet a approfondi mes compétences en gestion d’interfaces dynamiques et en manipulation de données utilisateur.",
-    "./assets/projets-image/previsualisation.png",
-    "https://github.com/AmdyMustafa/Makdown"
-  ],
-  ["25 + 5 Clock",
-    "JavaScript" ,
-    "Création d’une application de minuteur avec React, offrant une gestion dynamique des sessions de travail et de pause. L’application utilise setInterval pour la gestion du temps, avec des transitions visuelles entre les sessions. L’interface a été soigneusement conçue pour garantir une ergonomie optimale, et les événements ont été gérés de manière efficace avec les Hooks React. Ce projet m’a permis de perfectionner ma gestion des timers et des interactions utilisateur en temps réel.",
-    "./assets/projets-image/horloge.png",
-    "https://github.com/AmdyMustafa/Makdown"
-  ]
-  
+  {
+    titre: "Calculatrice",
+    technologie: "React Js",
+    description: "Développement d'une calculatrice complète avec React et JavaScript, gérant les opérations basiques et les événements utilisateur.",
+    image: "./assets/projets-image/calculatrice.png",
+    lien: "https://github.com/AmdyMustafa/Calculatrice"
+  },
+  {
+    titre: "Quote Machine",
+    technologie: "JavaScript",
+    description: "Application React générant des citations aléatoires en temps réel via une API externe, avec partage sur les réseaux sociaux.",
+    image: "./assets/projets-image/citation.png",
+    lien: "https://github.com/AmdyMustafa/CitationAleatoire"
+  },
+  {
+    titre: "Drum Machine",
+    technologie: "JavaScript",
+    description: "Création d'une boîte à rythmes interactive en React, réagissant aux touches du clavier avec animations CSS et gestion audio.",
+    image: "./assets/projets-image/drum-machine.png",
+    lien: "https://github.com/AmdyMustafa/DrumMachine"
+  },
+  {
+    titre: "Markdown Previewer",
+    technologie: "JavaScript",
+    description: "Éditeur Markdown en React avec conversion en temps réel via marked.js et synchronisation instantanée entre l’éditeur et l’aperçu.",
+    image: "./assets/projets-image/previsualisation.png",
+    lien: "https://github.com/AmdyMustafa/Markdown"
+  },
+  {
+    titre: "25 + 5 Clock",
+    technologie: "JavaScript",
+    description: "Minuteur React gérant cycles de travail et pauses avec setInterval, transitions visuelles et gestion efficace des événements.",
+    image: "./assets/projets-image/horloge.png",
+    lien: "https://github.com/AmdyMustafa/Clock"
+  }
 ];
 
 function Projets() {
   const [modalOpen, setModalOpen] = useState(null);
 
-  const openModal = (index) => {
-    setModalOpen(index);
-  };
-
-  const closeModal = () => {
-    setModalOpen(null);
-  };
-
   return (
     <section className="section_projet">
       <Titre titre1="PROJETS" titre2="Réalisation" />
       <div className="project-wrap">
-
-        <Projet_div NumeroProjet={0} onClick={() => openModal(1)} />
-
-        <Projet_div NumeroProjet={1} onClick={() => openModal(2)} />
-
-        <Projet_div NumeroProjet={2} onClick={() => openModal(3)} />
-
-        <Projet_div NumeroProjet={3} onClick={() => openModal(5)} />
-
-        <Projet_div NumeroProjet={4} onClick={() => openModal(4)} />
-
-        
+        {projets.map((projet, index) => (
+          <ProjetDiv key={index} projet={projet} onClick={() => setModalOpen(index)} />
+        ))}
       </div>
 
-      {modalOpen === 1 &&
+      {modalOpen !== null && (
         <Modal
           isOpen={true}
-          onClose={closeModal}
-          titre="Calculatrice"
-          src={projets[0][3]}
-          desciption={projets[0][2]}
+          onClose={() => setModalOpen(null)}
+          titre={projets[modalOpen].titre}
+          src={projets[modalOpen].image}
+          desciption={projets[modalOpen].description}
         />
-      }
-      {modalOpen === 2 &&
-        <Modal
-          isOpen={true}
-          onClose={closeModal}
-          titre="Random Quote Machine"
-          src={projets[1][3]}
-          desciption={projets[1][2]}
-        />
-      }
-      {modalOpen === 3 &&
-        <Modal
-          isOpen={true}
-          onClose={closeModal}
-          titre="Drum Machine"
-          src={projets[2][3]}
-          desciption={projets[2][2]}
-        />
-      }
-      {modalOpen === 4 &&
-        <Modal
-          isOpen={true}
-          onClose={closeModal}
-          titre="Markdown Previewer"
-          src={projets[4][3]}
-          desciption={projets[4][2]}
-        />
-      }
-      {modalOpen === 5 &&
-        <Modal
-          isOpen={true}
-          onClose={closeModal}
-          titre="25 + 5 Clock"
-          src={projets[3][3]}
-          desciption={projets[3][2]}
-        />
-      }
-      
+      )}
     </section>
   );
 }
-function Projet_div({ NumeroProjet, onClick }) {
+
+function ProjetDiv({ projet, onClick }) {
   return (
     <div className="projet_div" onClick={onClick}>
-      <img className="image_projet" src={projets[NumeroProjet][3]} alt="" />
+      <img className="image_projet" src={projet.image} alt={projet.titre} />
       <div className="projet_div_footer">
-        <p className="titre_projet">{projets[NumeroProjet][0]}</p>
-        <p className="technologies">{projets[NumeroProjet][1]}</p>
+        <p className="titre_projet">{projet.titre}</p>
+        <p className="technologies">{projet.technologie}</p>
         <div className="div_patager">
-        <a  onClick={onClick} title="Voir les détails" className="icone_a">
+          <a onClick={onClick} title="Voir les détails" className="icone_a">
             <i className="icone_i fa-solid fa-circle-plus"></i>
           </a>
-          <a href={projets[NumeroProjet][4]} className="icone_a" target="_blank" title="Retrouver le projet sur github" onClick={(e) => e.stopPropagation()}>
+          <a href={projet.lien} className="icone_a" target="_blank" title="Voir sur GitHub" onClick={(e) => e.stopPropagation()}>
             <i className="icone_i fab fa-github"></i>
           </a>
         </div>
@@ -138,5 +85,5 @@ function Projet_div({ NumeroProjet, onClick }) {
     </div>
   );
 }
-export default Projets;
 
+export default Projets;
