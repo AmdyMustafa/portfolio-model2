@@ -130,7 +130,7 @@ function Projet_div({ NumeroProjet, onClick }) {
         <a  onClick={onClick} title="Voir les détails" className="icone_a">
             <i className="icone_i fa-solid fa-circle-plus"></i>
           </a>
-          <a href={projets[NumeroProjet][4]} className="icone_a" target="_blank" title="Retrouver le projet sur github">
+          <a href={projets[NumeroProjet][4]} className="icone_a" target="_blank" title="Retrouver le projet sur github" onClick={(e) => e.stopPropagation()}>
             <i className="icone_i fab fa-github"></i>
           </a>
         </div>
