@@ -16,28 +16,28 @@
 .modal-content {
     background: white;
     border-radius: 10px;
-    width: 70%;
-    height: 95%;
-    max-width: 1200px;
+    width: 800px;
+    height: 400px;
     animation: fadeIn 0.3s ease-in-out;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding-bottom: 5%;
     overflow-y: auto;
 
 }
-
+.partie_gauche{
+    padding: 20px;
+}
 /* Bouton de fermeture */
 .close-btn1 {
     font-size: 15px;
     position: absolute;
     top: 10px;
-    right: 15px;
+    left: 15px;
     background: none;
     border: none;
-    font-size: 50px;
+    font-size: 30px;
     cursor: pointer;
     color: #555;
 
@@ -46,7 +46,8 @@
 .close-btn2 {
     font-size: 15px;
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: 5px;
+    margin-top: 20px;
     border-radius: 10px;
     color: #fff;
     width: 100px;
@@ -59,14 +60,14 @@
 
 .img_modal {
     width: 400px;
-    height: 300px;
-    border-radius: 20px;
+    height: 100%;
 }
-
+.modal-content h3{
+    color: black;
+}
 .description {
     color: black;
     font-size: 15px;
-    margin: 20px 20%;
     text-align: justify;
 }
 
