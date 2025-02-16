@@ -2,7 +2,7 @@ import "../../css/composants/ReseauSociaux.css";
 
 function ReseauSociaux() {
     return (
-        <div className="div_reseau">s
+        <div className="div_reseau">
                 <a href="https://www.linkedin.com/in/amdy-mustafa/" className="icone_a" target="_blank" title="Me retrouver sur LinkedIn">
                     <i className="icone_i fab fa-linkedin-in"></i>
                 </a>

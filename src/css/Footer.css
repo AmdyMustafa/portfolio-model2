@@ -1,9 +1,10 @@
-.section_footer ,.div_footer
+.section_footer ,.div_footer,.menu
 {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
 }
 .section_footer {
     padding: 50px 0;
@@ -23,19 +24,26 @@
 .section_footer img{
     width: 100px;
     margin: 0;
-    color: white;object-fit: contain;
+    object-fit: contain;
+}
+.menu{
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.menu a{
+    color: white;
 }
 .icone_mode {
     width: 30px;
     height: 30px;
+    gap: 20px;
     color: white;
-}
-.icones{
-    min-width: 300px;
 }
 .petit_text{
     font-size: 10px;
-    color: white;
 }
 @media (max-width: 770px) {
     .div_footer :nth-child(n){
