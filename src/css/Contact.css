@@ -1,21 +1,49 @@
-.section_contacts {
-    height: 100vh;
+.section_contacts,
+.div_coord_cont,
+.div_coordonnees,
+#contactForm {
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.section_contacts {
+    justify-content: flex-start;
     background-color: var(--White-color);
-    color: var(--secondary-color);
-    flex-direction: column;
-    width: 100%;
     margin-bottom: 100px;
+    flex-direction: column;
 }
 
 .section_contacts .line {
     background-color: var(--secondary-color);
 }
 
+.div_coord_cont {
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+padding: 0 5%;
+    height: 350px;
+}
+
+.div_coordonnees {
+    justify-content: space-between;
+    width: 30%;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
 #contactForm {
-    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
 .form-elem {
@@ -23,60 +51,78 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     position: relative;
-    margin: 50px 0;
+    margin: 5px 0;
+
 }
 
 .input {
     width: 100%;
-    height: 50px;
-    font-size: 20px;
+    height: 40px;
+    font-size: 15px;
     border: none;
+    border-radius: 5px;
     border-bottom: 1px solid rgb(215, 213, 213);
 }
 
 .input::placeholder {
     color: #929496;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 label {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 0;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
     color: #888;
-    transition:  font-size 0.3s ease, top 0.3s ease; 
+    transition: font-size 0.3s ease, top 0.3s ease;
     pointer-events: none;
     cursor: none;
 }
 
-#message{
-    height: 150px;
+#message {
+    height: 70px;
 }
 
 /* Si l'.input est cliqué ou en focus, déplace le label */
-.input:focus + label,
-.input:not(:placeholder-shown) + label {
-  font-size: 16px;
-  top: -10px;
+.input:focus+label,
+.input:not(:placeholder-shown)+label {
+    font-size: 10px;
+    top: 0;
 }
 
 .input:focus {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid var(--secondary-color);;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    ;
 }
 
-.button_send{
+.button_send {
     width: 100px;
-    height: 50px;
+    height: 40px;
     font-size: 15px;
-    background-color:  var(--primary-color);
-    padding: 10px;
+    background-color: white;
     border-radius: 10px;
     border: none;
-    color: #fff;
+    margin: 10px;
+    color: var(--primary-color);
+    ;
+}
+
+@media (max-width: 770px) {
+
+    .div_coordonnees,
+    #contactForm {
+        width: 90%;
+        height: 300px;
+    }
+
+    .div_coord_cont {
+        flex-direction: column;
+        height: 100vh;
+    }
 }
