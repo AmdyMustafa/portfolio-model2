@@ -11,5 +11,5 @@
 .icone_i {
     width: 30px;
     height: 50px;
-    color: white;
+    color: var(--secondary-color);
 }

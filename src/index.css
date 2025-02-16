@@ -3,14 +3,19 @@
 }
 :root {
     --primary-color: #001624; /* Couleur principale */
-    --secondary-color: rgba(44, 62, 80, 1); /* Couleur secondaire */
+    --secondary-color: white;/* Couleur secondaire */
     --White-color: white;
-    --Black-color: black;
+}
+body.dark-mode {
+    /* Valeurs pour le mode sombre */
+    --primary-color: rgba(118, 118, 118, 0.515); /* Couleur principale en mode sombre (vert menthe) */
+    --secondary-color: black;/* Couleur secondaire - mode sombre */
+    --background-dark: #2c3e50; /* Fond sombre */
 }
 
 h1 {
     font-size: 50px;
-    color: white;
+    color: var(--secondary-color);
     font-weight: 800;
 }
 h2 {
@@ -19,7 +24,7 @@ h2 {
     margin-top: 50px;
 }
 h3 {
-    color: white;
+    color: var(--secondary-color);
     font-weight: 800;
 }
 h4 {
@@ -29,7 +34,7 @@ h4 {
 }
 p {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: var(--secondary-color);
     font-size: 20px;
 }
 

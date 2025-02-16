@@ -109,8 +109,7 @@ label {
     border-radius: 10px;
     border: none;
     margin: 10px;
-    color: var(--primary-color);
-    ;
+    color: black;
 }
 
 @media (max-width: 770px) {

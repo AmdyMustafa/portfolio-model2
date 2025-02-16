@@ -5,12 +5,12 @@
     justify-content: space-between;
     width: 100%;
     padding: 20px;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); 
+    color: var(--secondary-color);
     border-radius: 15px;
 }
 .coordonnee h3,p{
-    color: white;
+    color: var(--secondary-color);
     margin: 0;
 }
 .coordonnee p{

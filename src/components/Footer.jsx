@@ -1,7 +1,27 @@
 import "../css/Footer.css";
 import ReseauSociaux from "./composants/ReseauSociaux";
+import React, { useState, useEffect } from 'react';
 
 function Footer() {
+    // State pour gérer le mode clair/sombre
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Effet pour appliquer la classe 'dark-mode' au body
+  useEffect(() => {
+    const iconElement = document.getElementById("icone_mode");
+
+    if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    iconElement.classList.remove("fa-moon");
+    iconElement.classList.add("fa-sun");
+  } else {
+    document.body.classList.remove('dark-mode');
+    iconElement.classList.add("fa-moon");
+    iconElement.classList.remove("fa-sun");
+  }
+  }, [isDarkMode]); // Le useEffect se déclenche à chaque changement du state
+
+
     return (
         <section className="section_footer">
 
@@ -15,8 +35,8 @@ function Footer() {
             </div>
             <div className="div_footer">
                 <div className="div_mode">
-                    <a href="https://www.linkedin.com/in/amdy-mustafa/">
-                        <i className=" icone_mode fa-solid fa-moon icon--dark"></i>
+                    <a onClick={() => setIsDarkMode(prevMode => !prevMode)}>
+                        <i id="icone_mode" className=" fa-solid"></i>
                     </a>
                 </div>
                 <ReseauSociaux />

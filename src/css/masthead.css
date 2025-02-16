@@ -31,6 +31,10 @@
     z-index: 1;
 }
 
+.masthead .icone_i {
+    color: white;
+}
+
 .presentation {
     z-index: 2;
     font-size: 30px;
@@ -46,9 +50,8 @@
 /* Définition de l'animation */
 .presentation p {
     line-height: 1.5;
-    /* Espacement entre les lignes */
     padding: 0;
-    /* Aucune marge interne */
+    color: white;
 }
 
 
