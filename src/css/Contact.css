@@ -9,7 +9,7 @@
 .section_contacts {
     justify-content: flex-start;
     background-color: var(--White-color);
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     flex-direction: column;
 }
 
