@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Header from './components/Header';
-import MastHead from './components/mastHead';
+import MastHead from './components/masthead';
 import Projets from './components/Projets';
 import About from './components/About';
 import Competences from './components/Competences';

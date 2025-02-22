@@ -37,7 +37,7 @@ function Masthead() {
         setCursorVisible(true);
         clearInterval(interval);
       }
-    }, 150); // Ajustez cette valeur pour changer la vitesse d'affichage des lettres
+    }, 50); // Ajustez cette valeur pour changer la vitesse d'affichage des lettres
 
     return () => clearInterval(interval); // Nettoyer l'intervalle à la fin
   }, []);
