@@ -78,6 +78,7 @@
 }
 .projet_div_footer .div_patager .icone_i{
     width: 20px;
+    margin-right: 10px;
 }
 .titre_projet{
     font-weight: 800;
@@ -95,11 +96,11 @@
 }
 .projet_div:hover  .projet_div_footer  .div_patager{
     opacity: 1;
-    transform: translateY(-15px);
+    transform: translateY(-30px);
 }
 .projet_div:hover  .technologies{
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
 }
 @media screen and (max-width:1000px) {
     .project-wrap{

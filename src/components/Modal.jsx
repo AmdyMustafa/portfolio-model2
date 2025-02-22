@@ -1,6 +1,6 @@
 import "../css/Modal.css";
 
-const Modal = ({ isOpen, onClose, titre, src, desciption }) => {
+const Modal = ({ isOpen, onClose, titre, src, desciption,technologie }) => {
     if (!isOpen) return null;
 
     return (
@@ -12,10 +12,11 @@ const Modal = ({ isOpen, onClose, titre, src, desciption }) => {
                     </button>
                     <h3>{titre}</h3>
                     <p className="description">{desciption}</p>
-                    <button className="close-btn2" onClick={onClose}>
-                        ✕ Fermer
-                    </button>
-
+                    <ul className="techno_container">
+                            {technologie.map((tech, index) => (
+                                <li className="techno" key={index}>{tech}</li>
+                            ))}
+                    </ul>
                 </div>
                 <img className="img_modal" src={src} alt="" />
             </div>
