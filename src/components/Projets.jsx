@@ -27,7 +27,7 @@ const projets = [
   },
   {
     titre: "Markdown Previewer",
-    technologie: ["React Js", "JavaScript"],
+    technologie: ["React Js", "Marked.js"],
     description: "Éditeur Markdown en React avec conversion en temps réel via marked.js et synchronisation instantanée entre l’éditeur et l’aperçu.",
     image: "./assets/projets-image/previsualisation.png",
     lien: "https://github.com/AmdyMustafa/Markdown"
