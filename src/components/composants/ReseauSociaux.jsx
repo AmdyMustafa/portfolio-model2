@@ -12,7 +12,7 @@ function ReseauSociaux() {
                 <a href="mailto:amoustapha.niang@example.com" className="icone_a" target="_blank" title="Me contacter par mail">
                     <i className="icone_i fa fa-envelope"></i>
                 </a>
-                <a href="" className="icone_a" target="_blank" title="Télécharger mon CV">
+                <a href="./document/CV.pdf" className="icone_a" target="_blank" title="Télécharger mon CV">
                     <i className="icone_i fas fa-file-pdf"></i>
                 </a>
             </div>
