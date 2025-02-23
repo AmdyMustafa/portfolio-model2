@@ -4,15 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "build:model1": "vite build --outDir dist/model1",
-  "build:model2": "vite build --outDir dist/model2",
-  "predeploy": "npm run build:model1 && npm run build:model2",
-  "deploy": "gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "intersection-observer": "^0.12.2",
