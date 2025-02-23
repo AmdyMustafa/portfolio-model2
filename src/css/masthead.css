@@ -6,7 +6,7 @@
     flex-direction: column;
 
     position: relative;
-    background: url("./assets/img/head.png");
+    background: url("./img/head.png");
     background-position: center;
     background-size: 70%;
     background-repeat: no-repeat;
