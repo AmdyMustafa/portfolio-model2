@@ -18,7 +18,7 @@ function Contacts() {
 
   return (
     <section className="section_contacts">
-      <Titre titre1="CONTACT" titre2="ME CONTACTER" />
+      <Titre titre1="CONTACT" titre2="CONTACTER" />
       <div className="div_coord_cont">
         <div className="div_coordonnees" >
           <Coordonnees titre="Mon adresse" Valeur="Lyon 69000, France" icone_class="fa-solid fa-location-dot" />

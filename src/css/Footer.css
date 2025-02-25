@@ -7,7 +7,6 @@
     color: var(--secondary-color);
 }
 .section_footer {
-    padding: 50px 0;
     background-color : var(--primary-color);
     justify-content: space-between;
     padding: 20px 10%;
@@ -52,6 +51,13 @@
     .div_reseau{
         min-width: 60%;
         justify-content: center;
+    }
+    .section_footer {
+        padding: 20px 0;
+    }
+    .menu{
+        gap: 10px;
+        font-size:10px ;
     }
 }
 

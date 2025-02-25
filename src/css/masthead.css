@@ -4,7 +4,6 @@
     align-items: flex-start;
     align-content: center;
     flex-direction: column;
-
     position: relative;
     background: url("./img/head.png");
     background-position: center;
@@ -27,7 +26,7 @@
     flex-direction: column;
     background-color: var(--primary-color);
     height: 100vh;
-    padding: 100px;
+    padding: 5%;
     z-index: 1;
 }
 
@@ -38,6 +37,7 @@
 .presentation {
     z-index: 2;
     font-size: 30px;
+    width: 100%;
 }
 
 /* Style des deux derniers paragraphes */
@@ -65,5 +65,15 @@
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 770px) {
+    .masthead {
+        justify-content: center;
+        gap:20%
+    }
+    .presentation p.grandtext {
+        font-size: 25px;
     }
 }

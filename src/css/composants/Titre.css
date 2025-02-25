@@ -5,16 +5,27 @@ h2 {
     text-align: center;
     color: black;
     width: 100%;
-    margin: 100px;
+    height: 100px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 h2 span {
     font-size: 80px;
     font-weight: 800;
     left: 0;
-    top: -80%;
+    top: 20px;
     right: 0;
     opacity: .03;
     position: absolute;
     text-align: center;
     z-index: 0;
+}
+@media (max-width: 770px) {
+    h2 span {
+        font-size: 50px;
+        top: 12px;
+        opacity: .09;
+    }
 }

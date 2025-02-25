@@ -6,8 +6,8 @@ function Masthead() {
   const [text, setText] = useState(["", "", ""]);
   const [cursorVisible, setCursorVisible] = useState(false); // Gérer l'état du curseur
   const messages = [
-    "Hello !",
-    "Je suis Amdy Mustafa",
+    "Hello ! Je suis",
+    "Amdy Mustafa",
     "Développeur Front-End"
   ];
 
